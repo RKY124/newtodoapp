@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   Todo.init({
     description: DataTypes.STRING,
     complete: DataTypes.BOOLEAN,
+    user_id: DataTypes.INTEGER,
     completeText: {
       type: DataTypes.VIRTUAL,
       get(){
@@ -25,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Todo',
-    tableName: 'todo',
+    tableName: 'todo3',
     timestamps: false,
   });
   return Todo;
